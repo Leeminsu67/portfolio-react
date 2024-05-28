@@ -55,9 +55,4 @@ const LoaderBar = styled.div`
   animation: ${LoaderBarAnimation} 2s ease-in-out infinite;
 `
   
-
-
-
-
-
 export default Loading
