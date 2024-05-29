@@ -5,9 +5,9 @@ import TitleBox from './GridItems/TitleBox'
 import GitHubBox from './GridItems/GitHubBox'
 import IntroductionBox from './GridItems/IntroductionBox'
 import SkillBox from './GridItems/SkillBox'
-import LifeBox from './GridItems/LifeBox'
 import EtcBox from './GridItems/EtcBox'
 import { media } from '../styles/media'
+import CareerBox from './GridItems/CareerBox'
 
 const GridContainer = () => {
 
@@ -18,7 +18,7 @@ const GridContainer = () => {
       <GitHubBox />
       <IntroductionBox />
       <SkillBox />
-      <LifeBox />
+      <CareerBox />
       <EtcBox />
     </MainGridContainer>
   )
