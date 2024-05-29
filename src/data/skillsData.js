@@ -5,7 +5,6 @@ export const skillsData = [
     borderColor: '#03a9f4',
     badge: [
       "https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white",
-      "https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=white",
       "https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=Javascript&logoColor=white",
       "https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white",
       "https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white",
