@@ -17,7 +17,9 @@ const ProjectBox = () => {
     navigate('/project')
   }
   return (
-    <Box onClick={projectBoxClickHandler}>ProjectBox</Box>
+    <Box onClick={projectBoxClickHandler}>
+      간략한 프로젝트 설명을 나열
+    </Box>
   );
 }
 

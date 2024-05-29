@@ -12,16 +12,14 @@ const SkillBox = () => {
 
   return (
     <Box>
-      <Title>
-        Skills
-      </Title>
+      <Title>Skills</Title>
       <ContentBox>
         {skillsData.map((skill)=>(
           <Content borderColor={skill.borderColor}>
             <ContentHeading color={skill.color}>
               {skill.title}
             </ContentHeading>
-            {skill.badge.map((str)=> <img src={str} />)}
+            {skill.badge.map((str)=> <img src={str} alt='bageimg' />)}
           </Content>
         ))}
       </ContentBox>
