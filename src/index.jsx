@@ -8,16 +8,16 @@ import Router from "./pages/Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <BrowserRouter>
     <Reset />
     <GlobalStyle />
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Router />} />
-        <Route path="/project" element={<Router path={'project'} />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+    <Routes>
+      <Route index element={<Router />} />
+      <Route path="/project" element={<Router path={'project'} />} />
+    </Routes>
+  </BrowserRouter>
+  // </React.StrictMode>
 );
 
 reportWebVitals();

@@ -8,7 +8,6 @@ const IntroductionBox = () => {
     grid-column: 2/4;
     grid-row: 2/4;
   `
-
   return (
     <Box>
       <Title>
@@ -38,16 +37,16 @@ const IntroductionBox = () => {
             </InfoBox>
           </InfoWrapper>
         </BasicInfoBox>
-
+        
         {/* 간략한 소개 */}
         <AboutDescription>
           <div>적응하고 소통하는 개발자입니다.</div>
-          dasgikoldsangoiasngiowengaweionioniogdahadfshadfdasgiko ldsan
-          goiasngiowengaweionioniogdahadfshadfdasgiko ldsangoiasngi 
-          dasgikoldsangoiasngiowen gaweionioniogdahadfshadf
-
-          dasgikoldsangoiasngiowengaweionioniogdahadfshadf
-
+          다방면으로 활약하는 유연한 개발자로, 풀스택 기반으로 서비스 유지보수와 R&D 연구개발 전반을
+           담당했으며 개발 뿐만 아니라 기획 보조와 간단한 기획을 통해 사업계획서를 
+           기반으로 WBS 작성, 요구사항 명세, 스토리보드를 완성했습니다. 또한 외주
+            업체와의 협력을 통해 일정 조율도 수행하였습니다. <br/>
+            모든 과정에서 최선을 다하며, 새로운 기술과 도전에 열려 있으며, 주어진 환경에서도 뛰어난 
+             성과를 이루어내고 있습니다.
         </AboutDescription>
       </CardContainer>
     </Box>
@@ -55,10 +54,14 @@ const IntroductionBox = () => {
 }
 
 const AboutDescription = styled.div`
-width: 100%;
+  width: 100%;
+  line-height: 1.4;
+  font-size: 14px;
+
   div{
     font-weight: 700;
     margin-bottom: 10px;
+    font-size: 18px;
   }
 `
 
@@ -75,9 +78,9 @@ const InfoWrapper = styled.div`
 `
 
 const BasicInfoBox = styled.div`
-  padding: 0 8rem;
+  /* padding: 0 8rem; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `
 
 const CardImageBox = styled.div`
@@ -98,7 +101,7 @@ const CardContainer = styled.div`
   box-shadow:0px 2px 4px rgba(0,0,0,0.3);
   box-sizing: border-box;
   border-radius:16px;
-  margin-top: 15px;
+  margin-top: 12px;
   padding: 1rem;
 
   display: flex;
