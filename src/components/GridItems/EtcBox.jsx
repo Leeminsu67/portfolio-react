@@ -10,17 +10,31 @@ const EtcBox = () => {
 
   return (
     <Box>
-      <Title>...</Title>
-      <Description>
-      </Description>
+      <Title>기타</Title>
+      <EtcContent>
+        <div>
+          <img src="img/sqld.png" alt="sqld" />
+          <span>
+            SQL 개발자 자격증
+          </span>
+        </div>
+      </EtcContent>
     </Box>
   );
 }
 
-const Description = styled.div`
+const EtcContent = styled.div`
   font-size: 14px;
   margin-top: 10px;
   width: 100%;
+
+  div{
+    display: flex;
+    align-items: center;
+    img{
+      width: 100px;
+    }
+  }
 `
 
 const Title = styled.h1`

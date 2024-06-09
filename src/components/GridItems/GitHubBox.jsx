@@ -31,8 +31,6 @@ const GitHubBox = () => {
       <HeadingTitle><span>소스코드 저장소 </span>입니다.</HeadingTitle>
       <ListBox>
         <ListItem>과거 프로젝트, 프로그램, 앱의 소스 코드</ListItem>
-        <ListItem>혼자서 코딩 연습을 위해 끄적이던 소스 코드</ListItem>
-        <ListItem>혼자서 코딩 연습을 위해 끄적이던 소스 코드</ListItem>
       </ListBox>
     </Box>
   );

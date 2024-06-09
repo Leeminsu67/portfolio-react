@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import ProjectBox from './GridItems/ProjectBox'
 import TitleBox from './GridItems/TitleBox'
@@ -8,25 +8,50 @@ import SkillBox from './GridItems/SkillBox'
 import EtcBox from './GridItems/EtcBox'
 import { media } from '../styles/media'
 import CareerBox from './GridItems/CareerBox'
+import Modal from './Modal'
+import { animeTimeMs } from '../styles/animation';
 
 const GridContainer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isUnmount, setIsUnmount] = useState(false);
+
+  const closeModal = () => {
+    setIsUnmount(true);
+
+    setTimeout(() => {
+      setIsOpen(false)
+    }, animeTimeMs);
+  }
+
+  const showModal = () => {
+    setIsUnmount(false)
+    setIsOpen(true);
+  };
 
   return (
-    <MainGridContainer>
-      <ProjectBox />
-      <TitleBox />
-      <GitHubBox />
-      <IntroductionBox />
-      <SkillBox />
-      <CareerBox />
-      <EtcBox />
-    </MainGridContainer>
+    <>
+      <MainGridContainer>
+        <ProjectBox handleClick={showModal} />
+        <TitleBox />
+        <GitHubBox />
+        <IntroductionBox />
+        <SkillBox />
+        <CareerBox handleClick={showModal} />
+        <EtcBox />
+      </MainGridContainer>
+      {isOpen && <Modal 
+        isUnmount={isUnmount} 
+        showModal={showModal} 
+        closeModal={closeModal} />}
+    </>
   )
 }
 
 const MainGridContainer = styled.main`
   width: 80%;
+  max-width: 1600px;
   height: 75%;
+  max-height: 1000px;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
