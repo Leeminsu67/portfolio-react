@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import { projectBoxData } from "../../data/projectBoxData";
+import { media } from "../../styles/media";
 
 // 일괄적인 박스 스타일을 props로 받아온 다음 나머지 grid 속성을 부여
 const ProjectBox = ({ handleClick }) => {
@@ -25,6 +26,16 @@ const ProjectBox = ({ handleClick }) => {
       transform: scale(1);
       z-index: 1;
     }
+
+    ${media.xl`
+      grid-column: 1/3;
+      grid-row: 4/7;
+    `}
+
+    ${media.md`
+      grid-column: 1/5;
+      grid-row: 6/9;
+    `}
   `;
   return (
     // <Box onClick={()=> handleClick('project')}>
@@ -35,10 +46,6 @@ const ProjectBox = ({ handleClick }) => {
       </Title>
       <Warpper>
         <Swiper
-          // style={{
-          //   "--swiper-navigation-color": "#03a9f4",
-          //   "--swiper-pagination-color": "#03a9f4",
-          // }}
           pagination={{
             clickable: true,
           }}
@@ -117,19 +124,10 @@ const Warpper = styled.article`
       transform: scale(1.3);
     }
 
-    /* .swiper-pagination-fraction {
-      width: 80%;
-      bottom: 0 !important;
-      padding: 4px 8px;
-      backdrop-filter: blur(10px);
+    /* .swiper-pagination {
+      bottom: -10px !important;
+      z-index: 3 !important;
     } */
-
-    .swiper-pagination {
-      text-align: center !important;
-      padding-top: 2px;
-      padding-bottom: 2px;
-      backdrop-filter: blur(10px);
-    }
 
     .swiper-pagination-bullet {
       background-color: gray !important;
@@ -145,7 +143,7 @@ const Warpper = styled.article`
 // slide content
 const Wrap = styled.div`
   width: 80%;
-  height: 90%;
+  height: 80%;
   padding: 1rem 2rem;
   border-radius: 10px;
   box-shadow: rgb(0 0 0/69%) 0px 5px 10px -5px, rgb(0 0 0/63%) 0px 2px 5px -5px;
@@ -160,12 +158,12 @@ const Wrap = styled.div`
   gap: 10px;
   overflow-y: auto;
 
-  /* &:hover {
+  &:hover {
     box-shadow: rgb(0 0 0/80%) 0px 10px 20px -16px,
       rgb(0 0 0/72%) 0px 10px 10px -10px;
     transform: scale(1.02);
     border-color: rgba(249, 249, 249, 0.8);
-  } */
+  }
 
   .period,
   .title,
@@ -199,7 +197,7 @@ const Title = styled.h1`
   small {
     font-weight: 300;
     font-size: 0.8rem;
-    color: #ccc;
+    color: #a9a9a9;
     margin: auto 0;
   }
 `;

@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import ProjectBox from './GridItems/ProjectBox'
-import TitleBox from './GridItems/TitleBox'
-import GitHubBox from './GridItems/GitHubBox'
-import IntroductionBox from './GridItems/IntroductionBox'
-import SkillBox from './GridItems/SkillBox'
-import EtcBox from './GridItems/EtcBox'
-import { media } from '../styles/media'
-import CareerBox from './GridItems/CareerBox'
-import Modal from './Modal'
-import { animeTimeMs } from '../styles/animation';
+import React, { useState } from "react";
+import styled from "styled-components";
+import ProjectBox from "./GridItems/ProjectBox";
+import TitleBox from "./GridItems/TitleBox";
+import GitHubBox from "./GridItems/GitHubBox";
+import IntroductionBox from "./GridItems/IntroductionBox";
+import SkillBox from "./GridItems/SkillBox";
+import EtcBox from "./GridItems/EtcBox";
+import { media } from "../styles/media";
+import CareerBox from "./GridItems/CareerBox";
+import Modal from "./Modal";
+import { animeTimeMs } from "../styles/animation";
 
 const GridContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,12 +19,12 @@ const GridContainer = () => {
     setIsUnmount(true);
 
     setTimeout(() => {
-      setIsOpen(false)
+      setIsOpen(false);
     }, animeTimeMs);
-  }
+  };
 
   const showModal = () => {
-    setIsUnmount(false)
+    setIsUnmount(false);
     setIsOpen(true);
   };
 
@@ -39,19 +39,24 @@ const GridContainer = () => {
         <CareerBox handleClick={showModal} />
         <EtcBox />
       </MainGridContainer>
-      {isOpen && <Modal 
-        isUnmount={isUnmount} 
-        showModal={showModal} 
-        closeModal={closeModal} />}
+      {isOpen && (
+        <Modal
+          isUnmount={isUnmount}
+          showModal={showModal}
+          closeModal={closeModal}
+        />
+      )}
     </>
-  )
-}
+  );
+};
 
 const MainGridContainer = styled.main`
   width: 80%;
   max-width: 1600px;
+  min-width: 1200px;
   height: 75%;
-  max-height: 1000px;
+  max-height: 700px;
+  min-height: 650px;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -59,30 +64,34 @@ const MainGridContainer = styled.main`
 
   gap: 0.8rem;
 
-  ${media.lg`
-    background-color: black;
+  ${media.xl`
+    min-width: auto;
+    min-height: auto;
+    width: 95%;
+    height: auto;
+    max-height: none;
+
+    grid-template-rows: repeat(7, 170px);
   `}
+
   ${media.md`
-    background-color: blue;
+    grid-template-rows: repeat(11, 170px);
   `}
-  ${media.sm`
-    background-color: red;
-  `}
-`
+`;
 // Grid item 공통 스타일
-export const GridItemBox = styled.div` 
+export const GridItemBox = styled.div`
   background-color: #fff;
   border-radius: 8px;
   box-sizing: border-box;
-  box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.4);
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
   padding: 1rem 1rem;
 
-  transition: transform .4s;
+  transition: transform 0.4s;
 
-  &:hover{
+  &:hover {
     transform: scale(1.04);
     z-index: 1;
   }
-`
+`;
 
-export default GridContainer
+export default GridContainer;
