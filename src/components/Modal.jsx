@@ -1,7 +1,7 @@
-import React from 'react'
-import { useRef } from 'react'
-import styled from 'styled-components'
-import { ZoomIn, ZoomOut } from '../styles/animation';
+import React from "react";
+import { useRef } from "react";
+import styled from "styled-components";
+import { ZoomIn, ZoomOut } from "../styles/animation";
 
 const Modal = ({ isUnmount, showModal, closeModal }) => {
   const backgroundRef = useRef();
@@ -10,19 +10,17 @@ const Modal = ({ isUnmount, showModal, closeModal }) => {
     if (e.target === backgroundRef.current) {
       closeModal();
     }
-  }
+  };
   return (
-    <Background 
-      ref={backgroundRef} 
-      onClick={(e)=>modalBgClickHandler(e)}
+    <Background
+      ref={backgroundRef}
+      onClick={(e) => modalBgClickHandler(e)}
       mount={isUnmount}
-      >
-      <ModalMainBox>
-        기본적으로는
-      </ModalMainBox>
+    >
+      <ModalMainBox>준비중 입니다.</ModalMainBox>
     </Background>
-  )
-}
+  );
+};
 
 const ModalMainBox = styled.div`
   width: 300px;
@@ -30,8 +28,8 @@ const ModalMainBox = styled.div`
   background-color: #fff;
   border-radius: 8px;
 
-  box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.4);
-`
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
+`;
 
 const Background = styled.div`
   width: 100%;
@@ -45,7 +43,7 @@ const Background = styled.div`
   align-items: center;
   z-index: 3;
 
-  animation: ${(props) => props.mount ? ZoomIn : ZoomOut} 0.6s ease-in-out;
-`
+  animation: ${(props) => (props.mount ? ZoomIn : ZoomOut)} 0.6s ease-in-out;
+`;
 
-export default Modal
+export default Modal;
