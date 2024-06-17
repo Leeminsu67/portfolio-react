@@ -13,8 +13,13 @@ import { projectBoxData } from "../../data/projectBoxData";
 import { media } from "../../styles/media";
 
 // 일괄적인 박스 스타일을 props로 받아온 다음 나머지 grid 속성을 부여
-const ProjectBox = ({ handleClick }) => {
-  // const navigate = useNavigate();
+const ProjectBox = ({ handleClick, swiperSection }) => {
+  console.log(swiperSection);
+  if(swiperSection < 0){
+    swiperSection = 0;
+  }
+
+  console.log(swiperSection);
 
   const Box = styled(GridItemBox)`
     grid-column: 1/2;
@@ -38,7 +43,6 @@ const ProjectBox = ({ handleClick }) => {
     `}
   `;
   return (
-    // <Box onClick={()=> handleClick('project')}>
     <Box>
       <Title>
         Projects
@@ -52,10 +56,11 @@ const ProjectBox = ({ handleClick }) => {
           navigation
           loop={true}
           modules={[Pagination, Navigation, Scrollbar, A11y]}
+          initialSlide={swiperSection}
         >
           {projectBoxData.map((project, index) => (
             <SwiperSlide>
-              <Wrap onClick={() => handleClick("project")}>
+              <Wrap onClick={() => handleClick(project)}>
                 <div className="period">{project.period}</div>
                 <div className="title">{project.title}</div>
                 <div className="sub-title">주요내용</div>
