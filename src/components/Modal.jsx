@@ -218,7 +218,7 @@ const ModalMainBox = styled.div`
 
   ${media.xl`
     width: 65%;
-    height: 80vh;
+    height: 80%;
     overflow: auto;
     .project_info__box{
       flex-flow: wrap;
@@ -255,13 +255,6 @@ const Background = styled.div`
   animation: ${(props) => (props.mount ? ZoomIn : ZoomOut)} 0.6s ease-in-out;
 
   ${media.xl`
-    justify-content: center;
-    align-items: start;
-    padding-top: 4rem;
-  `}
-
-  ${media.xl`
-    padding: 8rem;
     top: 0;
   `}
 `;
