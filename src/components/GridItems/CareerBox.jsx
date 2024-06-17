@@ -9,7 +9,7 @@ const CareerBox = ({ handleClick }) => {
     grid-row: 4/5;
 
     overflow-y: auto;
-    cursor: pointer;
+    /* cursor: pointer; */
 
     ${media.xl`
       grid-column: 3/5;
@@ -23,9 +23,11 @@ const CareerBox = ({ handleClick }) => {
   `;
 
   return (
-    <Box onClick={() => handleClick("career")}>
+    // <Box onClick={() => handleClick("career")}>
+    <Box>
       <Title>
-        Career <small>클릭 하면 상세히 볼 수 있습니다.</small>
+        Career
+        {/* <small>클릭 하면 상세히 볼 수 있습니다.</small> */}
       </Title>
       <CareerContainer>
         <img
