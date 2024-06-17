@@ -1,6 +1,6 @@
 export const projectBoxData = [
   {
-    id: 9,
+    id: 1,
     period: "2022.01 ~ 2024.01",
     title: "아이마커/키즈마커",
     mainContent: [
@@ -32,7 +32,7 @@ export const projectBoxData = [
     ],
   },
   {
-    id: 8,
+    id: 2,
     period: "2023.01 ~ 2024.02",
     title: "국토부 주요광역시 전동보장구 관리자 웹",
     mainContent: [
@@ -63,7 +63,7 @@ export const projectBoxData = [
     ],
   },
   {
-    id: 7,
+    id: 3,
     period: "2022.09 ~ 2022.10",
     title: "중기청 바우처 AutoML 상반신 비식별화 웹",
     mainContent: [
@@ -83,7 +83,7 @@ export const projectBoxData = [
     ],
   },
   {
-    id: 6,
+    id: 4,
     period: "2023.05 ~ 2023.06",
     title: "국토부 전동보장구 운용사 웹",
     mainContent: [
@@ -131,7 +131,7 @@ export const projectBoxData = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     period: "2023.09 ~ 2023.09",
     title: "파운더 외주 기획",
     mainContent: ["주식회사 파운더 기획 및 외부업체 일정 산정"],
@@ -147,7 +147,7 @@ export const projectBoxData = [
     ],
   },
   {
-    id: 3,
+    id: 7,
     period: "2022.01 ~ 2022.02",
     title: "과기부 지도 기반 Node, Link 데이터 수집 웹",
     mainContent: [
@@ -165,7 +165,7 @@ export const projectBoxData = [
     ],
   },
   {
-    id: 2,
+    id: 8,
     period: "2022.06 ~ 2022.06",
     title: "과기부 전동보장구 운용사 웹",
     mainContent: [
@@ -186,7 +186,7 @@ export const projectBoxData = [
     ],
   },
   {
-    id: 1,
+    id: 9,
     period: "2022.03 ~ 2022.05",
     title: "과기부 주요광역시 전동보장구 관리자 웹",
     mainContent: [
@@ -201,7 +201,6 @@ export const projectBoxData = [
     ],
     result: [
       "정규식 활용 SQL Injection 방지",
-      "리눅스 환경에서 NCP 웹 서버(NginX) 구축",
     ],
   },
 ];

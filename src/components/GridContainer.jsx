@@ -13,6 +13,7 @@ import { animeTimeMs } from "../styles/animation";
 
 const GridContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [project, setProject] = useState({id: 0});
   const [isUnmount, setIsUnmount] = useState(false);
 
   const closeModal = () => {
@@ -23,15 +24,19 @@ const GridContainer = () => {
     }, animeTimeMs);
   };
 
-  const showModal = () => {
+  const showModal = (section) => {
     setIsUnmount(false);
     setIsOpen(true);
+    setProject(section);
   };
 
   return (
     <>
       <MainGridContainer>
-        <ProjectBox handleClick={showModal} />
+        <ProjectBox 
+          handleClick={showModal}
+          swiperSection={project.id - 1}
+        />
         <TitleBox />
         <GitHubBox />
         <IntroductionBox />
@@ -44,6 +49,7 @@ const GridContainer = () => {
           isUnmount={isUnmount}
           showModal={showModal}
           closeModal={closeModal}
+          project={project}
         />
       )}
     </>
