@@ -19,7 +19,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: '어린이집 아동 및 선생님 자동출결, 출결 데이터 조회 및 수정, 운용사 웹으로 모든 데이터 관리'
       },
       {
         label: 'Frontend',
@@ -75,7 +75,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: 'SaaS형 웹으로 사용자들이 사용한 만큼 요금 산정, 요금제 구독 및 수정, 관리자 권한별 기능 제한, 다양한 지도 기능'
       },
       {
         label: 'Frontend',
@@ -122,7 +122,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: '동영상 파일 업로드, 파일 다운로드, 상반신 모자이크 및 블러처리 기능, 검색 필터'
       },
       {
         label: 'Frontend',
@@ -169,7 +169,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: '국토부 모든 데이터 조회, 다양한 지도 데이터 조회 및 수정, text editor 공지사항 생성 및 수정'
       },
       {
         label: 'Frontend',
@@ -215,7 +215,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: '서비스 신청, 서비스 조회, 서비스 신청 관리, 스크롤 애니메이션'
       },
       {
         label: 'Frontend',
@@ -252,6 +252,10 @@ export const projectImageData = [
     ],
     description: [
       {
+        label: '주요기능',
+        value: '음성 및 텍스트 AI 활용 영상 하이라이트 구간 기능'
+      },
+      {
         label: '산출물',
         value: 'WBS, 요구사항 명세서, 플로우차트'
       },
@@ -273,7 +277,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: '네이버지도 기반으로 좌표값 추출, Node 좌표 데이터 수집, 노면 재질 데이터 삽입, 위성 사진 제공'
       },
       {
         label: 'Frontend',
@@ -321,7 +325,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: '관리자 데이터 CRUD, 사용자 데이터 CRUD, 요금제 데이터 CRUD, 지도 데이터 조회'
       },
       {
         label: 'Frontend',
@@ -372,7 +376,7 @@ export const projectImageData = [
     description: [
       {
         label: '주요기능',
-        value: '솰라'
+        value: '요금제 구독 및 수정, 다양한 지도 기능 제공, 해당 구 관리자 관리'
       },
       {
         label: 'Frontend',
